@@ -3,6 +3,7 @@
 <h2>Documents</h2>
 
 ### [Project definition](https://github.com/Branuz/Algorithm-project-2022/blob/main/documentation/project_definition.md)
+### [Hour reporting](https://github.com/Branuz/Algorithm-project-2022/blob/main/documentation/hour_reporting.md)
 
 ### Weekly Reports
 
