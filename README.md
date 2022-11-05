@@ -14,7 +14,7 @@
 To run the application write the following command.
 
 ```
-./gradlew run
+./gradlew bootRun
 ```
 
 To run the tests write with the following command.
