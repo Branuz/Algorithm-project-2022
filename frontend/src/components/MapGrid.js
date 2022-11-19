@@ -1,9 +1,19 @@
-import * as React from 'react';
+import React, {useState, useEffect} from 'react'
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Unstable_Grid2';
 import Button from '@mui/material/Button';
 
 export default function FullBorderedGrid() {
+    const [gridColor, setGridColor] = useState([250])
+
+    const addColor = (e, index) => {
+      setGridColor(datas=>({
+        ...datas,
+        [index]: "Green"
+     }))
+    }
+
+
   return (
     <Box sx={{ flexGrow: 1, p: 2 }}>
       <Grid
@@ -22,8 +32,8 @@ export default function FullBorderedGrid() {
         }}
       >
         {[...Array(250)].map((_, index) => (
-            <Button variant="outlined" onClick={() => {console.log(index)}}>
-                <Grid key={index} {...{ xs: 1, sm: 1, md: 1, lg: 1 }} minHeight={30} />
+            <Button key={index} variant="outlined" onClick={(e) => addColor(e, index)} sx={{ backgroundColor: gridColor[index]}} >
+                <Grid key={index} {...{ xs: 1, sm: 1, md: 1, lg: 1 }} minHeight={30}  />
             </Button>
         ))}
       </Grid>

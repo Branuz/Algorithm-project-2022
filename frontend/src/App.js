@@ -1,12 +1,12 @@
 import './App.css';
 import AppBar from "./components/AppBar"
-import Grid from "./components/Grid"
+import MapGrid from "./components/MapGrid"
 
 function App() {
   return (
     <div className="App">
       <AppBar/>
-      <Grid/>
+      <MapGrid/>
     </div>
   );
 }
