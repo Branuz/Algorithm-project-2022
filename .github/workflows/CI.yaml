@@ -18,12 +18,14 @@ jobs:
       with:
         java-version: 11.0
     - name: Grant execute permission for gradlew
-      run: chmod +x ./backend/gradlew
+      run: |
+        cd ./backend
+        chmod +x gradlew
     - name: Test with Gradle
-      run: ./backend/gradlew test
+      run: ./gradlew test
     - name: Checkstyle
-      run: ./backend/gradlew checkstyleMain
+      run: ./gradlew checkstyleMain
     - name: Code coverage rapost
-      run: ./backend/gradlew jacocoTestReport
+      run: ./gradlew jacocoTestReport
     - name: Data to codecov
       run: bash <(curl -s https://codecov.io/bash)
