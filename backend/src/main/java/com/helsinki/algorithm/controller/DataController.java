@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.helsinki.algorithm.pathFinders.dijkstras.Node;
 import com.helsinki.algorithm.pathFinders.dijkstras.ShortestPath;
 
 import org.json.simple.JSONObject;
@@ -15,8 +16,7 @@ import org.json.simple.JSONObject;
 public class DataController {
 
     @PostMapping("/get")
-    public JSONObject test(@RequestBody String body) {
-        System.out.println(body);
+    public JSONObject test(@RequestBody JSONObject body) {
         ShortestPath.graphTest();
 
         JSONObject file = new JSONObject();
@@ -26,6 +26,8 @@ public class DataController {
     }
 
     public void graphMaker() {
-
+        for(int i = 0; i < 250; i++ ) {
+            Node node = new Node("1");
+        }
     }
 }

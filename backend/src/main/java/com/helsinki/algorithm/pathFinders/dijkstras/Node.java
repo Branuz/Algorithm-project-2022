@@ -35,10 +35,6 @@ public class Node {
         this.distance = distance;
     }
 
-    public void setAdjacentNodes(Map<Node, Integer> adjacentNodes) {
-        this.adjacentNodes = adjacentNodes;
-    }
-
     public String getName() {
         return this.name;
     }
