@@ -35,7 +35,12 @@ public class ShortestPath {
         graph = Dijkstra.calculateShortestPathFromSource(graph, nodeA);
 
         for (Node node : graph.getNodes()) {
-            System.out.println(node.getName());
+            System.out.println(node.getName()+":"+node.getDistance());
+            System.out.println("HERE");
+            node.getShortestPath().forEach(n -> System.out.print(n.getName()));
+           // System.out.println(node.getShortestPath());
+            System.out.println("-----");
+           // node.getShortestPath().forEach(n -> System.out.print(n.getName()));
         }
     }
     
