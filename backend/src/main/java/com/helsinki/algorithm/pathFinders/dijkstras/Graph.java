@@ -1,4 +1,4 @@
-package com.helsinki.algorithm.pathFinders.dijkstras;
+package com.helsinki.algorithm.pathfinders.dijkstras;
 
 import java.util.HashSet;
 import java.util.Set;

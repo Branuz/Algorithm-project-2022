@@ -1,4 +1,4 @@
-package com.helsinki.algorithm.pathFinders.dijkstras;
+package com.helsinki.algorithm.pathfinders.dijkstras;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -8,7 +8,7 @@ import java.util.Map.Entry;
 
 public class Dijkstra {
 
-    private static Node getLowestDistanceNode(Set < Node > unsettledNodes) {
+    private static Node getLowestDistanceNode(Set<Node> unsettledNodes) {
         Node lowestDistanceNode = null;
         int lowestDistance = Integer.MAX_VALUE;
 
@@ -22,7 +22,7 @@ public class Dijkstra {
         return lowestDistanceNode;
     }
 
-    private static void calculateMinimumDistance(Node evaluationNode,Integer edgeWeigh, Node sourceNode) {
+    private static void calculateMinimumDistance(Node evaluationNode, Integer edgeWeigh, Node sourceNode) {
         Integer sourceDistance = sourceNode.getDistance();
         
         if (sourceDistance + edgeWeigh < evaluationNode.getDistance()) {
@@ -31,7 +31,7 @@ public class Dijkstra {
             shortestPath.add(sourceNode);
             evaluationNode.setShortestPath(shortestPath);
         }
-}
+    }
 
     public static ArrayList<Node> calculateShortestPathFromSource(Graph graph, Node source) {
         source.setDistance(0);
@@ -47,8 +47,8 @@ public class Dijkstra {
             order.add(currentNode);
             unsettledNodes.remove(currentNode);
 
-            for (Entry < Node, Integer> adjacencyPair: 
-              currentNode.getAdjacentNodes().entrySet()) {
+            for (Entry<Node, Integer> adjacencyPair: 
+                currentNode.getAdjacentNodes().entrySet()) {
                 Node adjacentNode = adjacencyPair.getKey();
                 Integer edgeWeight = adjacencyPair.getValue();
 

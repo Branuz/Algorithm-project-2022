@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.helsinki.algorithm.pathFinders.dijkstras.Node;
-import com.helsinki.algorithm.pathFinders.dijkstras.ShortestPath;
+import com.helsinki.algorithm.pathfinders.dijkstras.Node;
+import com.helsinki.algorithm.pathfinders.dijkstras.ShortestPath;
 
 import org.json.simple.JSONObject;
 
@@ -23,11 +23,5 @@ public class DataController {
         file.put("Full Name", "Ritu Sharma");
 
         return file;
-    }
-
-    public void graphMaker() {
-        for(int i = 0; i < 250; i++ ) {
-            Node node = new Node("1");
-        }
     }
 }

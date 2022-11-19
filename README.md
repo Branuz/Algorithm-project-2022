@@ -30,6 +30,12 @@ To get jacoco test report run the command
 ./gradlew jacocoTestReport
 ```
 
+To run the checkstyles write the following command.
+
+```
+./gradlew checkstyleMain
+```
+
 To run the frontend of the application run the following command inside frontend folder.
 
 ```
