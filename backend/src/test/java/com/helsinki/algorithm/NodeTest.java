@@ -8,7 +8,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.helsinki.algorithm.pathFinders.dijkstras.Node;
+import com.helsinki.algorithm.pathfinders.dijkstras.Node;
 
 public class NodeTest {
 
