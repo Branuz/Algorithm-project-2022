@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Unstable_Grid2';
+import Button from '@mui/material/Button';
 
 export default function FullBorderedGrid() {
   return (
@@ -20,10 +21,11 @@ export default function FullBorderedGrid() {
           },
         }}
       >
-        {[...Array(252)].map((_, index) => (
-          <Grid key={index} {...{ xs: 1, sm: 1, md: 1, lg: 1 }} minHeight={30} />
-        ))
-        }
+        {[...Array(250)].map((_, index) => (
+            <Button variant="outlined" onClick={() => {console.log(index)}}>
+                <Grid key={index} {...{ xs: 1, sm: 1, md: 1, lg: 1 }} minHeight={30} />
+            </Button>
+        ))}
       </Grid>
     </Box>
   );
