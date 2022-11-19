@@ -1,6 +1,6 @@
 <h1>Algorithm-project-2022</h1>
 
-[![codecov](https://codecov.io/gh/Branuz/Algorithm-project-2022/branch/main/graph/badge.svg?token=8IPR12EK76)](https://codecov.io/gh/Branuz/Algorithm-project-2022)
+![GitHub Actions](https://github.com/Branuz/Algorithm-project-2022/workflows/Java%20CI%20with%20Gradle/badge.svg)[![codecov](https://codecov.io/gh/Branuz/Algorithm-project-2022/branch/main/graph/badge.svg?token=8IPR12EK76)](https://codecov.io/gh/Branuz/Algorithm-project-2022)
 
 <h2>Documents</h2>
 
