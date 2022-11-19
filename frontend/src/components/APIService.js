@@ -1,11 +1,12 @@
 export default class APIService {
 
-    static async getAllRecipes() {
+    static async getAllRecipes(body) {
         const response = await fetch("/data/get", {
-            "method":"GET",
+            "method":"POST",
             headers: {
               "Content-Type":"application/json"
-            }
+            },
+            body: JSON.stringify(body)
           })
           .then(response => {
             if(response.status === 200) {
@@ -15,5 +16,4 @@ export default class APIService {
           
           return await response
     }
-
 }

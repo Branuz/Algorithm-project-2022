@@ -1,5 +1,6 @@
 package com.helsinki.algorithm.pathFinders.dijkstras;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Set;
@@ -32,16 +33,18 @@ public class Dijkstra {
         }
 }
 
-    public static Graph calculateShortestPathFromSource(Graph graph, Node source) {
+    public static ArrayList<Node> calculateShortestPathFromSource(Graph graph, Node source) {
         source.setDistance(0);
     
         Set<Node> settledNodes = new HashSet<>();
         Set<Node> unsettledNodes = new HashSet<>();
-    
+        ArrayList<Node> order = new ArrayList<>();
+
         unsettledNodes.add(source);
     
         while (unsettledNodes.size() != 0) {
             Node currentNode = getLowestDistanceNode(unsettledNodes);
+            order.add(currentNode);
             unsettledNodes.remove(currentNode);
 
             for (Entry < Node, Integer> adjacencyPair: 
@@ -56,7 +59,7 @@ public class Dijkstra {
             }
             settledNodes.add(currentNode);
         }
-        return graph;
+        return order;
     }
     
 }

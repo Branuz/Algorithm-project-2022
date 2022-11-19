@@ -1,5 +1,8 @@
 package com.helsinki.algorithm.pathFinders.dijkstras;
 
+import java.util.ArrayList;
+import java.util.Set;
+
 public class ShortestPath {
 
     public static void graphTest() {
@@ -32,15 +35,17 @@ public class ShortestPath {
         graph.addNode(nodeE);
         graph.addNode(nodeF);
 
-        graph = Dijkstra.calculateShortestPathFromSource(graph, nodeA);
+       // graph = Dijkstra.calculateShortestPathFromSource(graph, nodeA);
+        ArrayList<Node> list = Dijkstra.calculateShortestPathFromSource(graph, nodeA);
+        System.out.println("---------------");
+        for (Node node : list) {
+            System.out.print(node.getName());
+            //System.out.println(node.getName()+":"+node.getDistance());
+          //  System.out.println(node.getName());
+          //  System.out.println("HERE");
+          //  node.getShortestPath().forEach(n -> System.out.print(n.getName()));
+          //  System.out.println("-----");
 
-        for (Node node : graph.getNodes()) {
-            System.out.println(node.getName()+":"+node.getDistance());
-            System.out.println("HERE");
-            node.getShortestPath().forEach(n -> System.out.print(n.getName()));
-           // System.out.println(node.getShortestPath());
-            System.out.println("-----");
-           // node.getShortestPath().forEach(n -> System.out.print(n.getName()));
         }
     }
     
