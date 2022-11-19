@@ -22,10 +22,16 @@ jobs:
         cd ./backend
         chmod +x gradlew
     - name: Test with Gradle
-      run: ./gradlew test
+      run: |
+        cd ./backend
+        ./gradlew test
     - name: Checkstyle
-      run: ./gradlew checkstyleMain
+      run: |
+        cd ./backend
+        ./gradlew checkstyleMain
     - name: Code coverage rapost
-      run: ./gradlew jacocoTestReport
+      run: |
+        cd ./backend
+        ./gradlew jacocoTestReport
     - name: Data to codecov
       run: bash <(curl -s https://codecov.io/bash)
