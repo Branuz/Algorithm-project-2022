@@ -17,17 +17,13 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 11.0
-    - name: Move to backend
-      run: cd ./backend
-    - name: Print location
-      run: ls
     - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
+      run: chmod +x ./backend/gradlew
     - name: Test with Gradle
-      run: ./gradlew test
+      run: ./backend/gradlew test
     - name: Checkstyle
-      run: ./gradlew checkstyleMain
+      run: ./backend/gradlew checkstyleMain
     - name: Code coverage rapost
-      run: ./gradlew jacocoTestReport
+      run: ./backend/gradlew jacocoTestReport
     - name: Data to codecov
       run: bash <(curl -s https://codecov.io/bash)
